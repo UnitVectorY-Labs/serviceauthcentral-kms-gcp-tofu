@@ -4,6 +4,10 @@
 
 OpenTofu module for deploying ServiceAuthCentral KMS Keys
 
+## KMS Key
+
+The purpose of this module is to deploy the keyring and key for use by ServiceAuthCentral.  This is an asymmetric signing key using the `RSA_SIGN_PKCS1_2048_SHA256` algorithm.  This is configured to not create the actual version of the key by default. The intent here is that it is necessary to rotate keys and this is not expected to be performed with the Tofu.
+
 ## Usage
 
 ```hcl
