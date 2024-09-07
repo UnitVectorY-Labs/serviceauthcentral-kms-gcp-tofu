@@ -2,7 +2,7 @@
 
 # serviceauthcentral-kms-gcp-tofu
 
-OpenTofu module for deploying ServiceAuthCentral KMS Keys
+OpenTofu module for deploying ServiceAuthCentral KMS Keys in GCP
 
 ## KMS Key
 
