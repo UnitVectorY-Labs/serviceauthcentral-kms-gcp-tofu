@@ -4,9 +4,12 @@
 
 OpenTofu module for deploying ServiceAuthCentral KMS Keys in GCP
 
-## KMS Key
+## References
 
-The purpose of this module is to deploy the keyring and key for use by ServiceAuthCentral.  This is an asymmetric signing key using the `RSA_SIGN_PKCS1_2048_SHA256` algorithm.  This is configured to not create the actual version of the key by default. The intent here is that it is necessary to rotate keys and this is not expected to be performed with the Tofu.
+- [ServiceAuthCentral](https://github.com/UnitVectorY-Labs/ServiceAuthCentral) - Simplify microservice security with ServiceAuthCentral: Centralized, open-source authorization in the cloud, minus the shared secrets.
+- [ServiceAuthCentral Documentation](https://unitvectory-labs.github.io/ServiceAuthCentral/) - Documentation for ServiceAuthCentral
+- [serviceauthcentralweb](https://github.com/UnitVectorY-Labs/serviceauthcentralweb) - Web based management interface for ServiceCloudAuth
+- [serviceauthcentral-gcp-tofu](https://github.com/UnitVectorY-Labs/serviceauthcentral-gcp-tofu) - OpenTofu module for deploying a fully working ServiceAuthCentral deployment in GCP
 
 ## Usage
 
@@ -17,6 +20,10 @@ module "serviceauthcentral_kms_gcp" {
     project_id = var.project_id
 }
 ```
+
+## KMS Key
+
+The purpose of this module is to deploy the keyring and key for use by ServiceAuthCentral.  This is an asymmetric signing key using the `RSA_SIGN_PKCS1_2048_SHA256` algorithm.  This is configured to not create the actual version of the key by default. The intent here is that it is necessary to rotate keys and this is not expected to be performed with the Tofu.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
